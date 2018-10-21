@@ -1,0 +1,9 @@
+<li class="list-group-item">
+    <div style="display:flex; justify-content:space-between">
+        <h3 style="font-weight: bold"> {{postTitle}} </h3>
+        {{postDate | date: 'EEEE d MMMM y - h:mm:ss a' }}
+    </div>
+    <h5 style="margin-bottom:2em"> {{postContent}}</h5>
+    <span id="nbLike" style="padding:1em">0</span> <button class="btn btn-success" (click)="onLike()">Like</button>
+    <span id="nbDislike" style="padding:1em; margin-left: 1em">0</span> <button class="btn btn-danger"  (click)="onDislike()">Dislike</button>
+</li><br>

@@ -1,13 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  selector: 'app-post-list-component',
+  templateUrl: './post-list-component.component.html',
+  styleUrls: ['./post-list-component.component.scss']
 })
-export class AppComponent {
-  title = 'Posts';
 
+
+export class PostListComponentComponent implements OnInit {
+ 
   posts = [
     {
       title: "Premier post",
@@ -28,4 +29,9 @@ export class AppComponent {
       created_at: new Date()
     }
   ]
+  constructor() { }
+
+  ngOnInit() {
+  }
+
 }
